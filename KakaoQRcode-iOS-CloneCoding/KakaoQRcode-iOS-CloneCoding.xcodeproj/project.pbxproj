@@ -15,7 +15,6 @@
 		F82BDE4926D7748600EE7A27 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE4826D7748600EE7A27 /* MainViewModel.swift */; };
 		F82BDE4E26D7752900EE7A27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE4D26D7752900EE7A27 /* ViewController.swift */; };
 		F82BDE5026D7752D00EE7A27 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE4F26D7752D00EE7A27 /* Const.swift */; };
-		F82BDE5426D7788500EE7A27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE5326D7788500EE7A27 /* SceneDelegate.swift */; };
 		F82BDE5626D799F800EE7A27 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE5526D799F800EE7A27 /* Observable.swift */; };
 /* End PBXBuildFile section */
 
@@ -30,7 +29,6 @@
 		F82BDE4826D7748600EE7A27 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		F82BDE4D26D7752900EE7A27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F82BDE4F26D7752D00EE7A27 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		F82BDE5326D7788500EE7A27 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F82BDE5526D799F800EE7A27 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +97,6 @@
 			isa = PBXGroup;
 			children = (
 				F82BDE2F26D771BF00EE7A27 /* AppDelegate.swift */,
-				F82BDE5326D7788500EE7A27 /* SceneDelegate.swift */,
 				F82BDE5726D79A0100EE7A27 /* Observable */,
 				F82BDE4326D7744000EE7A27 /* View */,
 				F82BDE4426D7744400EE7A27 /* Model */,
@@ -121,8 +118,8 @@
 		F82BDE4C26D7751400EE7A27 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				F82BDE4D26D7752900EE7A27 /* ViewController.swift */,
 				F82BDE4F26D7752D00EE7A27 /* Const.swift */,
+				F82BDE4D26D7752900EE7A27 /* ViewController.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -206,7 +203,6 @@
 			files = (
 				F82BDE5626D799F800EE7A27 /* Observable.swift in Sources */,
 				F82BDE4E26D7752900EE7A27 /* ViewController.swift in Sources */,
-				F82BDE5426D7788500EE7A27 /* SceneDelegate.swift in Sources */,
 				F82BDE4926D7748600EE7A27 /* MainViewModel.swift in Sources */,
 				F82BDE3426D771BF00EE7A27 /* MainViewController.swift in Sources */,
 				F82BDE3026D771BF00EE7A27 /* AppDelegate.swift in Sources */,
@@ -360,7 +356,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "hyun99999.KakaoQRcode-iOS-CloneCoding";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -379,7 +375,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "hyun99999.KakaoQRcode-iOS-CloneCoding";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
