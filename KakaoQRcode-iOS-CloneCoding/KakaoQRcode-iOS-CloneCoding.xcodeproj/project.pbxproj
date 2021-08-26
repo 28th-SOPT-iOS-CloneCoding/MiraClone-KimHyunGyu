@@ -1,0 +1,410 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F82BDE3026D771BF00EE7A27 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE2F26D771BF00EE7A27 /* AppDelegate.swift */; };
+		F82BDE3426D771BF00EE7A27 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE3326D771BF00EE7A27 /* MainViewController.swift */; };
+		F82BDE3926D771BF00EE7A27 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F82BDE3826D771BF00EE7A27 /* Assets.xcassets */; };
+		F82BDE3C26D771BF00EE7A27 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F82BDE3A26D771BF00EE7A27 /* LaunchScreen.storyboard */; };
+		F82BDE4726D7746300EE7A27 /* MainModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE4626D7746300EE7A27 /* MainModel.swift */; };
+		F82BDE4926D7748600EE7A27 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE4826D7748600EE7A27 /* MainViewModel.swift */; };
+		F82BDE4E26D7752900EE7A27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE4D26D7752900EE7A27 /* ViewController.swift */; };
+		F82BDE5026D7752D00EE7A27 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE4F26D7752D00EE7A27 /* Const.swift */; };
+		F82BDE5426D7788500EE7A27 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE5326D7788500EE7A27 /* SceneDelegate.swift */; };
+		F82BDE5626D799F800EE7A27 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE5526D799F800EE7A27 /* Observable.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F82BDE2C26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "KakaoQRcode-iOS-CloneCoding.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F82BDE2F26D771BF00EE7A27 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F82BDE3326D771BF00EE7A27 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		F82BDE3826D771BF00EE7A27 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F82BDE3B26D771BF00EE7A27 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F82BDE3D26D771BF00EE7A27 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F82BDE4626D7746300EE7A27 /* MainModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainModel.swift; sourceTree = "<group>"; };
+		F82BDE4826D7748600EE7A27 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		F82BDE4D26D7752900EE7A27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F82BDE4F26D7752D00EE7A27 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		F82BDE5326D7788500EE7A27 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F82BDE5526D799F800EE7A27 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F82BDE2926D771BF00EE7A27 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F82BDE2326D771BF00EE7A27 = {
+			isa = PBXGroup;
+			children = (
+				F82BDE2E26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding */,
+				F82BDE2D26D771BF00EE7A27 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F82BDE2D26D771BF00EE7A27 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F82BDE2C26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F82BDE2E26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding */ = {
+			isa = PBXGroup;
+			children = (
+				F82BDE4B26D774A500EE7A27 /* Resource */,
+				F82BDE4A26D7749C00EE7A27 /* Source */,
+			);
+			path = "KakaoQRcode-iOS-CloneCoding";
+			sourceTree = "<group>";
+		};
+		F82BDE4326D7744000EE7A27 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F82BDE3A26D771BF00EE7A27 /* LaunchScreen.storyboard */,
+				F82BDE3326D771BF00EE7A27 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F82BDE4426D7744400EE7A27 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F82BDE4626D7746300EE7A27 /* MainModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F82BDE4526D7744900EE7A27 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F82BDE4826D7748600EE7A27 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F82BDE4A26D7749C00EE7A27 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				F82BDE2F26D771BF00EE7A27 /* AppDelegate.swift */,
+				F82BDE5326D7788500EE7A27 /* SceneDelegate.swift */,
+				F82BDE5726D79A0100EE7A27 /* Observable */,
+				F82BDE4326D7744000EE7A27 /* View */,
+				F82BDE4426D7744400EE7A27 /* Model */,
+				F82BDE4526D7744900EE7A27 /* ViewModel */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		F82BDE4B26D774A500EE7A27 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				F82BDE3D26D771BF00EE7A27 /* Info.plist */,
+				F82BDE3826D771BF00EE7A27 /* Assets.xcassets */,
+				F82BDE4C26D7751400EE7A27 /* Constants */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		F82BDE4C26D7751400EE7A27 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F82BDE4D26D7752900EE7A27 /* ViewController.swift */,
+				F82BDE4F26D7752D00EE7A27 /* Const.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
+		F82BDE5726D79A0100EE7A27 /* Observable */ = {
+			isa = PBXGroup;
+			children = (
+				F82BDE5526D799F800EE7A27 /* Observable.swift */,
+			);
+			path = Observable;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F82BDE2B26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F82BDE4026D771BF00EE7A27 /* Build configuration list for PBXNativeTarget "KakaoQRcode-iOS-CloneCoding" */;
+			buildPhases = (
+				F82BDE2826D771BF00EE7A27 /* Sources */,
+				F82BDE2926D771BF00EE7A27 /* Frameworks */,
+				F82BDE2A26D771BF00EE7A27 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "KakaoQRcode-iOS-CloneCoding";
+			productName = "KakaoQRcode-iOS-CloneCoding";
+			productReference = F82BDE2C26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F82BDE2426D771BF00EE7A27 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
+				TargetAttributes = {
+					F82BDE2B26D771BF00EE7A27 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
+				};
+			};
+			buildConfigurationList = F82BDE2726D771BF00EE7A27 /* Build configuration list for PBXProject "KakaoQRcode-iOS-CloneCoding" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F82BDE2326D771BF00EE7A27;
+			productRefGroup = F82BDE2D26D771BF00EE7A27 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F82BDE2B26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F82BDE2A26D771BF00EE7A27 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F82BDE3C26D771BF00EE7A27 /* LaunchScreen.storyboard in Resources */,
+				F82BDE3926D771BF00EE7A27 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F82BDE2826D771BF00EE7A27 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F82BDE5626D799F800EE7A27 /* Observable.swift in Sources */,
+				F82BDE4E26D7752900EE7A27 /* ViewController.swift in Sources */,
+				F82BDE5426D7788500EE7A27 /* SceneDelegate.swift in Sources */,
+				F82BDE4926D7748600EE7A27 /* MainViewModel.swift in Sources */,
+				F82BDE3426D771BF00EE7A27 /* MainViewController.swift in Sources */,
+				F82BDE3026D771BF00EE7A27 /* AppDelegate.swift in Sources */,
+				F82BDE4726D7746300EE7A27 /* MainModel.swift in Sources */,
+				F82BDE5026D7752D00EE7A27 /* Const.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F82BDE3A26D771BF00EE7A27 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F82BDE3B26D771BF00EE7A27 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F82BDE3E26D771BF00EE7A27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F82BDE3F26D771BF00EE7A27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F82BDE4126D771BF00EE7A27 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8C9SSEX5G;
+				INFOPLIST_FILE = "KakaoQRcode-iOS-CloneCoding/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hyun99999.KakaoQRcode-iOS-CloneCoding";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F82BDE4226D771BF00EE7A27 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = T8C9SSEX5G;
+				INFOPLIST_FILE = "KakaoQRcode-iOS-CloneCoding/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "hyun99999.KakaoQRcode-iOS-CloneCoding";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F82BDE2726D771BF00EE7A27 /* Build configuration list for PBXProject "KakaoQRcode-iOS-CloneCoding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F82BDE3E26D771BF00EE7A27 /* Debug */,
+				F82BDE3F26D771BF00EE7A27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F82BDE4026D771BF00EE7A27 /* Build configuration list for PBXNativeTarget "KakaoQRcode-iOS-CloneCoding" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F82BDE4126D771BF00EE7A27 /* Debug */,
+				F82BDE4226D771BF00EE7A27 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F82BDE2426D771BF00EE7A27 /* Project object */;
+}
