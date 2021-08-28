@@ -21,6 +21,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         setLayout()
+        
     }
 }
 
@@ -54,6 +55,29 @@ extension MainViewController {
         let nextVC = QRCodeViewController()
         nextVC.modalPresentationStyle = .overFullScreen
         present(nextVC, animated: true, completion: nil)
+    }
+    
+    override func motionBegan(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            print("shake began")
+            presentToQRCodeVC()
+        }
+        
+        // 조건문을 사용해서 motion 을 비교하지 않고 아래의 코드처럼 사용해도 괜찮다. 일반적으로 사용할 때는 motionShake 에 해당되기 때문이다.
+        // print("shake began")
+        // presentToQRCodeVC()
+    }
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            print("shake ended")
+        }
+    }
+    
+    override func motionCancelled(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if motion == .motionShake {
+            print("shake cancelled")
+        }
     }
 }
 
