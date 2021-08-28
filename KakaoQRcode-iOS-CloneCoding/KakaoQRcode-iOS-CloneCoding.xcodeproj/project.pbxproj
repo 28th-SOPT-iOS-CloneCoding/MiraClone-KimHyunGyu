@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -16,6 +16,9 @@
 		F82BDE4E26D7752900EE7A27 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE4D26D7752900EE7A27 /* ViewController.swift */; };
 		F82BDE5026D7752D00EE7A27 /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE4F26D7752D00EE7A27 /* Const.swift */; };
 		F82BDE5626D799F800EE7A27 /* Observable.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE5526D799F800EE7A27 /* Observable.swift */; };
+		F82BDE5A26D7F46900EE7A27 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = F82BDE5926D7F46900EE7A27 /* SnapKit */; };
+		F82BDE5C26D7F64200EE7A27 /* QRCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE5B26D7F64200EE7A27 /* QRCodeViewController.swift */; };
+		F82BDE6E26D9DE1900EE7A27 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE6D26D9DE1900EE7A27 /* UIView+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +33,8 @@
 		F82BDE4D26D7752900EE7A27 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F82BDE4F26D7752D00EE7A27 /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
 		F82BDE5526D799F800EE7A27 /* Observable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Observable.swift; sourceTree = "<group>"; };
+		F82BDE5B26D7F64200EE7A27 /* QRCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewController.swift; sourceTree = "<group>"; };
+		F82BDE6D26D9DE1900EE7A27 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F82BDE5A26D7F46900EE7A27 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,39 +74,40 @@
 			path = "KakaoQRcode-iOS-CloneCoding";
 			sourceTree = "<group>";
 		};
-		F82BDE4326D7744000EE7A27 /* View */ = {
+		F82BDE4326D7744000EE7A27 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				F82BDE3A26D771BF00EE7A27 /* LaunchScreen.storyboard */,
 				F82BDE3326D771BF00EE7A27 /* MainViewController.swift */,
+				F82BDE5B26D7F64200EE7A27 /* QRCodeViewController.swift */,
 			);
-			path = View;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		F82BDE4426D7744400EE7A27 /* Model */ = {
+		F82BDE4426D7744400EE7A27 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				F82BDE4626D7746300EE7A27 /* MainModel.swift */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		F82BDE4526D7744900EE7A27 /* ViewModel */ = {
+		F82BDE4526D7744900EE7A27 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
 				F82BDE4826D7748600EE7A27 /* MainViewModel.swift */,
 			);
-			path = ViewModel;
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		F82BDE4A26D7749C00EE7A27 /* Source */ = {
 			isa = PBXGroup;
 			children = (
 				F82BDE2F26D771BF00EE7A27 /* AppDelegate.swift */,
-				F82BDE5726D79A0100EE7A27 /* Observable */,
-				F82BDE4326D7744000EE7A27 /* View */,
-				F82BDE4426D7744400EE7A27 /* Model */,
-				F82BDE4526D7744900EE7A27 /* ViewModel */,
+				F82BDE5726D79A0100EE7A27 /* Observables */,
+				F82BDE4326D7744000EE7A27 /* Views */,
+				F82BDE4426D7744400EE7A27 /* Models */,
+				F82BDE4526D7744900EE7A27 /* ViewModels */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -111,6 +118,7 @@
 				F82BDE3D26D771BF00EE7A27 /* Info.plist */,
 				F82BDE3826D771BF00EE7A27 /* Assets.xcassets */,
 				F82BDE4C26D7751400EE7A27 /* Constants */,
+				F82BDE6C26D9DDFB00EE7A27 /* Extensions */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -124,12 +132,20 @@
 			path = Constants;
 			sourceTree = "<group>";
 		};
-		F82BDE5726D79A0100EE7A27 /* Observable */ = {
+		F82BDE5726D79A0100EE7A27 /* Observables */ = {
 			isa = PBXGroup;
 			children = (
 				F82BDE5526D799F800EE7A27 /* Observable.swift */,
 			);
-			path = Observable;
+			path = Observables;
+			sourceTree = "<group>";
+		};
+		F82BDE6C26D9DDFB00EE7A27 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F82BDE6D26D9DE1900EE7A27 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +164,9 @@
 			dependencies = (
 			);
 			name = "KakaoQRcode-iOS-CloneCoding";
+			packageProductDependencies = (
+				F82BDE5926D7F46900EE7A27 /* SnapKit */,
+			);
 			productName = "KakaoQRcode-iOS-CloneCoding";
 			productReference = F82BDE2C26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding.app */;
 			productType = "com.apple.product-type.application";
@@ -175,6 +194,9 @@
 				Base,
 			);
 			mainGroup = F82BDE2326D771BF00EE7A27;
+			packageReferences = (
+				F82BDE5826D7F46900EE7A27 /* XCRemoteSwiftPackageReference "SnapKit" */,
+			);
 			productRefGroup = F82BDE2D26D771BF00EE7A27 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -203,6 +225,8 @@
 			files = (
 				F82BDE5626D799F800EE7A27 /* Observable.swift in Sources */,
 				F82BDE4E26D7752900EE7A27 /* ViewController.swift in Sources */,
+				F82BDE5C26D7F64200EE7A27 /* QRCodeViewController.swift in Sources */,
+				F82BDE6E26D9DE1900EE7A27 /* UIView+Extension.swift in Sources */,
 				F82BDE4926D7748600EE7A27 /* MainViewModel.swift in Sources */,
 				F82BDE3426D771BF00EE7A27 /* MainViewController.swift in Sources */,
 				F82BDE3026D771BF00EE7A27 /* AppDelegate.swift in Sources */,
@@ -401,6 +425,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F82BDE5826D7F46900EE7A27 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F82BDE5926D7F46900EE7A27 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F82BDE5826D7F46900EE7A27 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F82BDE2426D771BF00EE7A27 /* Project object */;
 }
