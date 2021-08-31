@@ -12,12 +12,12 @@ public class MainViewModel {
     
     let isShakeAvailable = Observable(true)
 
-    
     func setShakeAvailable(to available: Bool) {
         self.isShakeAvailable.value = available
     }
     
-    // presentation methods
+    // MARK: - presentation methods
+    
     @objc
     func presentToQRCodeVC(_ view: UIViewController) {
         let nextVC = QRCodeViewController()
