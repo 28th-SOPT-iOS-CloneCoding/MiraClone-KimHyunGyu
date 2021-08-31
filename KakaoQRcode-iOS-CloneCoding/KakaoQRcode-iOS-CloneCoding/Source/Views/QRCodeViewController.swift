@@ -26,8 +26,9 @@ class QRCodeViewController: UIViewController {
     let privateQuestionButton = UIButton()
     let qrcodeImageBackView = UIView()
     let qrcodeImageView = QRCodeView()
-    let speechBubble = SpeechBubbleView()
+    let timeLabel = UILabel()
     
+    var isSpeechBubble = false
     var isShakeAvailable = true
     
     // MARK: - View Life Cycle
@@ -38,7 +39,6 @@ class QRCodeViewController: UIViewController {
         setLayout()
         setBinding()
     }
-
 }
 
 extension QRCodeViewController {
@@ -104,28 +104,15 @@ extension QRCodeViewController {
         privateStackView.alignment = .fill
         privateStackView.distribution = .equalSpacing
         
-        // speechBubble
-//        speechBubble.speechBubbleColor = .white
-//        speechBubble.lineColor = .lightGray
-//        speechBubble.lineWidth = 3
-//        speechBubble.cornerRadius = 10
-//        
-//        speechBubble.triangleType = .center
-//        speechBubble.triangleSpacing = 10
-//        speechBubble.triangleWidth = 10
-//        speechBubble.triangleHeight = 10
-//        
-//        speechBubble.layer.shadowColor = UIColor.black.cgColor
-//        speechBubble.layer.shadowRadius = 3
-//        speechBubble.layer.shadowOpacity = 0.2
-//        qrcodeBackView.layer.shadowOffset = CGSize(width: 0, height: -3)
-        
+        timeLabel.font = UIFont.systemFont(ofSize: 15)
+        timeLabel.textColor = .gray
+        viewModel.setTimeText()
     }
     
     private func setLayout() {
         
-        view.addSubviews([titleLabel, subtitleLabel, closeButton, switchShakeButton, qrcodeBackView, speechBubble])
-        qrcodeBackView.addSubviews([qrcodeTopView, qrcodeImageBackView])
+        view.addSubviews([titleLabel, subtitleLabel, closeButton, switchShakeButton, qrcodeBackView])
+        qrcodeBackView.addSubviews([qrcodeTopView, qrcodeImageBackView, timeLabel])
         qrcodeTopView.addSubviews([privateStackView])
         qrcodeImageBackView.addSubviews([qrcodeImageView])
         
@@ -178,11 +165,10 @@ extension QRCodeViewController {
             $0.edges.equalTo(qrcodeImageBackView)
         }
         
-//        speechBubble.snp.makeConstraints {
-//            $0.bottom.equalTo(privateStackView.snp.top).offset(4)
-//            $0.centerX.equalToSuperview()
-//            $0.height.width.equalTo(CGSize(width: 170, height: 100))
-//        }
+        timeLabel.snp.makeConstraints {
+            $0.top.equalTo(qrcodeImageBackView.snp.bottom).offset(8)
+            $0.centerX.equalToSuperview()
+        }
     }
     
     private func setBinding() {
@@ -203,6 +189,13 @@ extension QRCodeViewController {
 
         viewModel.qrcodeMsg.bind { msg in
             self.qrcodeImageView.generateCode(msg)
+        }
+        
+        viewModel.timeText.bind { time in
+            let text = "남은 시간 \(time)초"
+            let attributeStrring = NSMutableAttributedString(string: text)
+            attributeStrring.addAttribute(.foregroundColor, value:  UIColor.red, range: NSRange.init(location: 6, length: String(time).count+1))
+            self.timeLabel.attributedText = attributeStrring
         }
     }
 }

@@ -21,7 +21,6 @@
 		F82BDE6E26D9DE1900EE7A27 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE6D26D9DE1900EE7A27 /* UIView+Extension.swift */; };
 		F82BDE7026DCBD0300EE7A27 /* QRCodeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE6F26DCBD0300EE7A27 /* QRCodeViewModel.swift */; };
 		F82BDE7226DE0A5200EE7A27 /* QRCodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE7126DE0A5200EE7A27 /* QRCodeView.swift */; };
-		F82BDE7526DE140800EE7A27 /* SpeechBubbleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82BDE7426DE140800EE7A27 /* SpeechBubbleView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,7 +39,6 @@
 		F82BDE6D26D9DE1900EE7A27 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		F82BDE6F26DCBD0300EE7A27 /* QRCodeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeViewModel.swift; sourceTree = "<group>"; };
 		F82BDE7126DE0A5200EE7A27 /* QRCodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeView.swift; sourceTree = "<group>"; };
-		F82BDE7426DE140800EE7A27 /* SpeechBubbleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechBubbleView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,7 +158,6 @@
 			isa = PBXGroup;
 			children = (
 				F82BDE7126DE0A5200EE7A27 /* QRCodeView.swift */,
-				F82BDE7426DE140800EE7A27 /* SpeechBubbleView.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -244,7 +241,6 @@
 				F82BDE4E26D7752900EE7A27 /* ViewController.swift in Sources */,
 				F82BDE5C26D7F64200EE7A27 /* QRCodeViewController.swift in Sources */,
 				F82BDE7226DE0A5200EE7A27 /* QRCodeView.swift in Sources */,
-				F82BDE7526DE140800EE7A27 /* SpeechBubbleView.swift in Sources */,
 				F82BDE6E26D9DE1900EE7A27 /* UIView+Extension.swift in Sources */,
 				F82BDE7026DCBD0300EE7A27 /* QRCodeViewModel.swift in Sources */,
 				F82BDE4926D7748600EE7A27 /* MainViewModel.swift in Sources */,
