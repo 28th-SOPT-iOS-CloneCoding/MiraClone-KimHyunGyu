@@ -12,8 +12,13 @@ class QRCodeViewController: UIViewController {
 
     // MARK: - Properties
     
+    let viewModel = QRCodeViewModel()
+    
     let qrcodeLabel = UILabel()
     let closeButton = UIButton()
+    let switchShakeButton = UIButton()
+    
+    var isShakeAvailable = true
     
     // MARK: - View Life Cycle
     
@@ -21,6 +26,7 @@ class QRCodeViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         setLayout()
+        setBinding()
     }
 
 }
@@ -34,12 +40,25 @@ extension QRCodeViewController {
         closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
         closeButton.tintColor = .black
         closeButton.setPreferredSymbolConfiguration(.init(pointSize: 20, weight: .regular), forImageIn: .normal)
-        closeButton.addTarget(self, action: #selector(dismisssToMain), for: .touchUpInside)
+        closeButton.addAction(UIAction { _ in
+            self.viewModel.dismissToMainVC(self)
+        }, for: .touchUpInside)
+        
+        switchShakeButton.tintColor = .darkGray
+        switchShakeButton.setTitleColor(.darkGray, for: .normal)
+        switchShakeButton.titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        switchShakeButton.addAction(UIAction { _ in
+            self.viewModel.setShakeAvailable()
+            self.viewModel.setShakeText()
+            self.viewModel.setShakeImage()
+            print(self.viewModel.isShakeAvailable.value)
+        }, for: .touchUpInside)
     }
     
-    func setLayout() {
-        view.addSubviews([qrcodeLabel, closeButton])
+    private func setLayout() {
+        view.addSubviews([qrcodeLabel, closeButton, switchShakeButton])
         let guide = view.safeAreaLayoutGuide
+        
         qrcodeLabel.snp.makeConstraints { make in
             make.centerX.centerY.equalToSuperview()
         }
@@ -48,11 +67,29 @@ extension QRCodeViewController {
             make.top.equalTo(guide).offset(20)
             make.trailing.equalTo(guide).offset(-20)
         }
+    
+        switchShakeButton.snp.makeConstraints { make in
+            make.bottom.equalTo(guide).offset(-20)
+            make.centerX.equalToSuperview()
+        }
     }
     
-    @objc
-    func dismisssToMain() {
-        dismiss(animated: true, completion: nil)
+    private func setBinding() {
+        viewModel.isShakeAvailable.bind { available in
+            self.isShakeAvailable = available
+        }
+        
+        viewModel.shakeText.bind { text in
+            self.switchShakeButton.setTitle(text, for: .normal)
+            let attributeString = NSMutableAttributedString(string: text)
+            attributeString.addAttribute(.underlineStyle , value: "1", range: NSRange.init(location: 0, length: text.count))
+            self.switchShakeButton.titleLabel?.attributedText = attributeString
+        }
+        
+        viewModel.shakeImg.bind { image in
+            self.switchShakeButton.setImage(UIImage(systemName: image), for: .normal)
+        }
+        
     }
 }
 

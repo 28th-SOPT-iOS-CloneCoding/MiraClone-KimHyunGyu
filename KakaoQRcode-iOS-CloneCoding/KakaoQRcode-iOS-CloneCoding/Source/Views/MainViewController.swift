@@ -9,6 +9,8 @@ import UIKit
 import SnapKit
 // CMMotionMager 를 사용하기 위해서
 import CoreMotion
+// AudioServicesPlaySystemSound(_:) 메서드를 사용하기 위해서
+import AudioToolbox
 
 class MainViewController: UIViewController {
     
@@ -65,10 +67,7 @@ extension MainViewController {
     
     @objc
     private func presentToQRCodeVC() {
-        let nextVC = QRCodeViewController()
-        nextVC.modalPresentationStyle = .overFullScreen
-        present(nextVC, animated: true, completion: nil)
-        
+        viewModel.presentToQRCodeVC(self)
     }
     
     /*
@@ -109,9 +108,11 @@ extension MainViewController {
             motionNumber += 1
             print("motionNumber: \(motionNumber)")
             
-            if motionNumber == 2 {
+            let isShakeAvailable = viewModel.isShakeAvailable.value
+            if motionNumber == 2 && isShakeAvailable {
                 motionNumber = 0
                 presentToQRCodeVC()
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             }
         }
     }
