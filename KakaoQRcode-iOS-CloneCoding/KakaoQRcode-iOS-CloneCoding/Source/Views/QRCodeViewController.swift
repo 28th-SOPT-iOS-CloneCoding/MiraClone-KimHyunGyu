@@ -16,17 +16,22 @@ class QRCodeViewController: UIViewController {
     
     let closeButton = UIButton()
     let switchShakeButton = UIButton()
+    let privateQuestionButton = UIButton()
+    
     let titleLabel = UILabel()
     let subtitleLabel = UILabel()
-    let qrcodeBackView = UIView()
-    let qrcodeTopView = UIView()
-    let privateStackView = UIStackView()
     let privatetextLabel = UILabel()
     let privateNumberLabel = UILabel()
-    let privateQuestionButton = UIButton()
-    let qrcodeImageBackView = UIView()
-    let qrcodeImageView = QRCodeView()
     let timeLabel = UILabel()
+    
+    let qrcodeBackView = UIView()
+    let qrcodeTopView = UIView()
+    let qrcodeImageBackView = UIView()
+    
+    let privateStackView = UIStackView()
+    
+    
+    let qrcodeImageView = QRCodeView()
     
     var isSpeechBubble = false
     var isShakeAvailable = true
@@ -38,8 +43,11 @@ class QRCodeViewController: UIViewController {
         configUI()
         setLayout()
         setBinding()
+        setNotification()
     }
 }
+
+// MARK: - Extensions
 
 extension QRCodeViewController {
     private func configUI(){
@@ -179,7 +187,7 @@ extension QRCodeViewController {
         viewModel.shakeText.bind { text in
             self.switchShakeButton.setTitle(text, for: .normal)
             let attributeString = NSMutableAttributedString(string: text)
-            attributeString.addAttribute(.underlineStyle , value: "1", range: NSRange.init(location: 0, length: text.count))
+            attributeString.addAttribute(.underlineStyle , value: 1 , range: NSRange.init(location: 0, length: text.count))
             self.switchShakeButton.titleLabel?.attributedText = attributeString
         }
         
@@ -197,6 +205,17 @@ extension QRCodeViewController {
             attributeStrring.addAttribute(.foregroundColor, value:  UIColor.red, range: NSRange.init(location: 6, length: String(time).count+1))
             self.timeLabel.attributedText = attributeStrring
         }
+    }
+    
+    private func setNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(blockScreenShot), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
+    }
+    
+    @objc
+    func blockScreenShot() {
+        let alert = UIAlertController(title: "캡쳐는 안돼요!", message: "보안 정책에 따라 스크린샷을 캡쳐할 수 없습니다.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "확인", style: .default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
     }
 }
 
