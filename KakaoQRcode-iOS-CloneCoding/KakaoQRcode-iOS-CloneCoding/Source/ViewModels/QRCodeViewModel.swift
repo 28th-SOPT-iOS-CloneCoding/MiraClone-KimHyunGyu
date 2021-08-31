@@ -12,7 +12,9 @@ public class QRCodeViewModel {
     
     let isShakeAvailable = Observable(true)
     let shakeText = Observable("QR 체크인 쉐이크 기능 끄기")
-    let shakeImg = Observable("iphone.radiowaves.left.and.right")
+    let shakeImg = Observable("iphone.slash")
+    let qrcodeMsg = Observable("https://gyuios.tistory.com/78")
+    let timeText = Observable(15)
     
     func setShakeAvailable() {
         self.isShakeAvailable.value = !isShakeAvailable.value
@@ -34,8 +36,26 @@ public class QRCodeViewModel {
         }
     }
     
-    // presentation methods
+    func setQrcodeMsg() {
+        self.qrcodeMsg.value = "https://gyuios.tistory.com/78"
+    }
+    
+    func setTimeText() {
+        Timer.scheduledTimer(timeInterval: 1, target: self, selector: #selector(timerAction), userInfo: nil, repeats: true)
+    }
+    
     @objc
+    func timerAction() {
+        if self.timeText.value == 0 {
+            self.timeText.value = 15
+            self.qrcodeMsg.value = "https://gyuios.tistory.com/79"
+        } else {
+            self.timeText.value -= 1
+        }
+    }
+    
+    // MARK: - presentation methods
+    
     func dismissToMainVC(_ view: UIViewController) {
         view.dismiss(animated: true, completion: nil)
     }
