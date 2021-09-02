@@ -209,6 +209,7 @@ extension QRCodeViewController {
     
     private func setNotification() {
         NotificationCenter.default.addObserver(self, selector: #selector(blockScreenShot), name: UIApplication.userDidTakeScreenshotNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(blockScreenShot), name: UIScreen.capturedDidChangeNotification, object: nil)
     }
     
     @objc
