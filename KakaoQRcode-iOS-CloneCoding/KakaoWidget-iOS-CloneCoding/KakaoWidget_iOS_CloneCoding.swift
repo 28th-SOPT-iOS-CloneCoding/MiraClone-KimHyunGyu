@@ -7,26 +7,26 @@
 
 import WidgetKit
 import SwiftUI
-import Intents
+//import Intents
 
-struct Provider: IntentTimelineProvider {
+struct Provider: TimelineProvider {
     func placeholder(in context: Context) -> SimpleEntry {
-        SimpleEntry(date: Date(), configuration: ConfigurationIntent())
+        SimpleEntry(date: Date())
     }
 
-    func getSnapshot(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (SimpleEntry) -> ()) {
-        let entry = SimpleEntry(date: Date(), configuration: configuration)
+    func getSnapshot(in context: Context, completion: @escaping (SimpleEntry) -> ()) {
+        let entry = SimpleEntry(date: Date())
         completion(entry)
     }
 
-    func getTimeline(for configuration: ConfigurationIntent, in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
+    func getTimeline(in context: Context, completion: @escaping (Timeline<Entry>) -> ()) {
         var entries: [SimpleEntry] = []
 
         // Generate a timeline consisting of five entries an hour apart, starting from the current date.
         let currentDate = Date()
         for hourOffset in 0 ..< 5 {
             let entryDate = Calendar.current.date(byAdding: .hour, value: hourOffset, to: currentDate)!
-            let entry = SimpleEntry(date: entryDate, configuration: configuration)
+            let entry = SimpleEntry(date: entryDate)
             entries.append(entry)
         }
 
@@ -37,7 +37,7 @@ struct Provider: IntentTimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-    let configuration: ConfigurationIntent
+//    let configuration: ConfigurationIntent
 }
 
 // profile widget
@@ -48,13 +48,13 @@ struct ProfileEntryView: View {
         Text("프로필")
     }
 }
-// static
+
 struct Profile: Widget {
-    let kind: String = "profile"
+    let kind: String = "KakaoWidget_iOS_CloneCoding"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            ProfileEntryView(entry: entry)
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+            QRcodeWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("내 프로필")
         .description("내 프로필 이미지를 보여주고,\n나와의 채팅방으로 빠르게 접근합니다.")
@@ -70,13 +70,13 @@ struct FavoritesWidgetEntryView: View {
         Text("즐겨찾기")
     }
 }
-// static
+
 struct FavoritesWidget: Widget {
-    let kind: String = "Favorites"
+    let kind: String = "KakaoWidget_iOS_CloneCoding"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            FavoritesWidgetEntryView(entry: entry)
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+            QRcodeWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("즐겨찾기")
         .description("즐겨찾기한 채팅방을 보여주고, 빠르게 접근합니다.")
@@ -92,13 +92,13 @@ struct CalenderWidgetEntryView: View {
         Text("톡캘린더")
     }
 }
-// static
+
 struct CalenderWidget: Widget {
-    let kind: String = "Calender"
+    let kind: String = "KakaoWidget_iOS_CloneCoding"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
-            CalenderWidgetEntryView(entry: entry)
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
+            QRcodeWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("톡캘린더")
         .description("예정된 일정을 쉽게 확인하고 톡캘린더에\n빠르게 접근합니다.")
@@ -116,13 +116,12 @@ struct QRcodeWidgetEntryView : View {
     }
 }
 
-//static
 //@main
 struct QRcodeWidget: Widget {
     let kind: String = "KakaoWidget_iOS_CloneCoding"
 
     var body: some WidgetConfiguration {
-        IntentConfiguration(kind: kind, intent: ConfigurationIntent.self, provider: Provider()) { entry in
+        StaticConfiguration(kind: kind, provider: Provider()) { entry in
             QRcodeWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("QR체크인")
@@ -145,7 +144,7 @@ struct KakaoWidget: WidgetBundle {
 
 struct KakaoWidget_iOS_CloneCoding_Previews: PreviewProvider {
     static var previews: some View {
-        QRcodeWidgetEntryView(entry: SimpleEntry(date: Date(), configuration: ConfigurationIntent()))
+        QRcodeWidgetEntryView(entry: SimpleEntry(date: Date()))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
