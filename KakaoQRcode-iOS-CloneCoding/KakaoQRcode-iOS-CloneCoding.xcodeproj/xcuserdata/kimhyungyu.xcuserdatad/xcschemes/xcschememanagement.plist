@@ -4,36 +4,49 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>KakakoWidget-iOS-CloneCodingExtension.xcscheme_^#shared#^_</key>
+		<key>KakaoQRcode-iOS-CloneCoding.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>1</integer>
 		</dict>
-		<key>KakaoQRcode-iOS-CloneCoding.xcscheme_^#shared#^_</key>
+		<key>KakaoWidget-iOS-CloneCodingExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>5</integer>
 		</dict>
 		<key>SnapKitPlayground (Playground) 1.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<key>SnapKitPlayground (Playground) 2.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>3</integer>
+			<integer>4</integer>
 		</dict>
 		<key>SnapKitPlayground (Playground).xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>2</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>F82BDE2B26D771BF00EE7A27</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F842E65D26E20F06000B2C2B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
