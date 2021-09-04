@@ -54,7 +54,7 @@ struct Profile: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            QRcodeWidgetEntryView(entry: entry)
+            ProfileEntryView(entry: entry)
         }
         .configurationDisplayName("내 프로필")
         .description("내 프로필 이미지를 보여주고,\n나와의 채팅방으로 빠르게 접근합니다.")
@@ -76,7 +76,7 @@ struct FavoritesWidget: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            QRcodeWidgetEntryView(entry: entry)
+            FavoritesWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("즐겨찾기")
         .description("즐겨찾기한 채팅방을 보여주고, 빠르게 접근합니다.")
@@ -86,10 +86,23 @@ struct FavoritesWidget: Widget {
 
 // Calender widget
 struct CalenderWidgetEntryView: View {
+    @Environment(\.widgetFamily) var family: WidgetFamily
     var entry: Provider.Entry
 
     var body: some View {
-        Text("톡캘린더")
+        sizeBody()
+    }
+    
+    @ViewBuilder
+    func sizeBody() -> some View {
+        switch family {
+        case .systemSmall:
+            Text("톡캘린더 - small")
+        case .systemMedium:
+            Text("톡캘린더 - medium")
+        default:
+            EmptyView()
+        }
     }
 }
 
@@ -98,7 +111,7 @@ struct CalenderWidget: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            QRcodeWidgetEntryView(entry: entry)
+            CalenderWidgetEntryView(entry: entry)
         }
         .configurationDisplayName("톡캘린더")
         .description("예정된 일정을 쉽게 확인하고 톡캘린더에\n빠르게 접근합니다.")
