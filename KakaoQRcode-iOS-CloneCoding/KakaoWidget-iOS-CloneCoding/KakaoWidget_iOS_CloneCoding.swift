@@ -124,7 +124,9 @@ struct QRcodeWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text("QR코드")
+        Image("qrcodeImage")
+            .resizable()
+            .scaledToFill()
             .widgetURL(url)
     }
 }

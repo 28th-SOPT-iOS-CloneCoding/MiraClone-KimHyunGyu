@@ -32,11 +32,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if path == qrcodeLinkPath {
             let nextVC = QRCodeViewController()
             nextVC.modalPresentationStyle = .overFullScreen
-            
-//            let window = UIWindow(frame: UIScreen.main.bounds)
-//            window.rootViewController = MainViewController()
-//            window.makeKeyAndVisible()
-//            self.window = window
+        
             
             window?.rootViewController?.present(nextVC, animated: true, completion: nil)
             return true
