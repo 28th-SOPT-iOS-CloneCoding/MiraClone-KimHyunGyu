@@ -37,7 +37,6 @@ struct Provider: TimelineProvider {
 
 struct SimpleEntry: TimelineEntry {
     let date: Date
-//    let configuration: ConfigurationIntent
 }
 
 // profile widget
@@ -50,7 +49,7 @@ struct ProfileEntryView: View {
 }
 
 struct Profile: Widget {
-    let kind: String = "KakaoWidget_iOS_CloneCoding"
+    let kind: String = "Profile"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
@@ -72,7 +71,7 @@ struct FavoritesWidgetEntryView: View {
 }
 
 struct FavoritesWidget: Widget {
-    let kind: String = "KakaoWidget_iOS_CloneCoding"
+    let kind: String = "FavoritesWidget"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
@@ -107,7 +106,7 @@ struct CalenderWidgetEntryView: View {
 }
 
 struct CalenderWidget: Widget {
-    let kind: String = "KakaoWidget_iOS_CloneCoding"
+    let kind: String = "CalenderWidget"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
@@ -121,17 +120,20 @@ struct CalenderWidget: Widget {
 
 // QRcode widget
 struct QRcodeWidgetEntryView : View {
+    let url = URL(string: "qrcode")
     var entry: Provider.Entry
 
     var body: some View {
-//        Text(entry.date, style: .time)
-        Text("QR코드")
+        Image("qrcodeImage")
+            .resizable()
+            .scaledToFill()
+            .widgetURL(url)
     }
 }
 
 //@main
 struct QRcodeWidget: Widget {
-    let kind: String = "KakaoWidget_iOS_CloneCoding"
+    let kind: String = "QRcodeWidget"
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in

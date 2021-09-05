@@ -21,6 +21,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        let qrcodeLinkPath = "qrcode"
+        
+        // 정의된 URL 요청 외의 시도는 false.
+        guard let components = NSURLComponents(url: url, resolvingAgainstBaseURL: true), let path = components.path else {
+            return false
+        }
+        if path == qrcodeLinkPath {
+            let nextVC = QRCodeViewController()
+            nextVC.modalPresentationStyle = .overFullScreen
+        
+            
+            window?.rootViewController?.present(nextVC, animated: true, completion: nil)
+            return true
+        } else {
+            return false
+        }
+    }
 
 //    // MARK: UISceneSession Lifecycle
 //
