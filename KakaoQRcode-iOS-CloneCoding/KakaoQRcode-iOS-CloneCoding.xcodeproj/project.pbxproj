@@ -28,6 +28,7 @@
 		F842E66826E20F07000B2C2B /* KakaoWidget_iOS_CloneCoding.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F842E66426E20F06000B2C2B /* KakaoWidget_iOS_CloneCoding.intentdefinition */; };
 		F842E66926E20F07000B2C2B /* KakaoWidget_iOS_CloneCoding.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = F842E66426E20F06000B2C2B /* KakaoWidget_iOS_CloneCoding.intentdefinition */; };
 		F842E66C26E20F07000B2C2B /* KakaoWidget-iOS-CloneCodingExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F842E65E26E20F06000B2C2B /* KakaoWidget-iOS-CloneCodingExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F8EF6DAF26E54FAF007A6121 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EF6DAE26E54FAF007A6121 /* UserDefaults+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,9 @@
 		F842E66726E20F07000B2C2B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8D624C026DF466A00CD5187 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F8D624C226DF466A00CD5187 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		F8EF6DAC26E538B3007A6121 /* KakaoQRcode-iOS-CloneCoding.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KakaoQRcode-iOS-CloneCoding.entitlements"; sourceTree = "<group>"; };
+		F8EF6DAD26E539EE007A6121 /* KakaoWidget-iOS-CloneCodingExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KakaoWidget-iOS-CloneCodingExtension.entitlements"; sourceTree = "<group>"; };
+		F8EF6DAE26E54FAF007A6121 /* UserDefaults+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserDefaults+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		F82BDE2326D771BF00EE7A27 = {
 			isa = PBXGroup;
 			children = (
+				F8EF6DAD26E539EE007A6121 /* KakaoWidget-iOS-CloneCodingExtension.entitlements */,
 				F82BDE2E26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding */,
 				F842E66126E20F06000B2C2B /* KakaoWidget-iOS-CloneCoding */,
 				F8D624BF26DF466A00CD5187 /* Frameworks */,
@@ -122,6 +127,7 @@
 		F82BDE2E26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding */ = {
 			isa = PBXGroup;
 			children = (
+				F8EF6DAC26E538B3007A6121 /* KakaoQRcode-iOS-CloneCoding.entitlements */,
 				F82BDE4B26D774A500EE7A27 /* Resource */,
 				F82BDE4A26D7749C00EE7A27 /* Source */,
 			);
@@ -200,6 +206,7 @@
 			isa = PBXGroup;
 			children = (
 				F82BDE6D26D9DE1900EE7A27 /* UIView+Extension.swift */,
+				F8EF6DAE26E54FAF007A6121 /* UserDefaults+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -347,6 +354,7 @@
 				F82BDE4926D7748600EE7A27 /* MainViewModel.swift in Sources */,
 				F82BDE3426D771BF00EE7A27 /* MainViewController.swift in Sources */,
 				F82BDE3026D771BF00EE7A27 /* AppDelegate.swift in Sources */,
+				F8EF6DAF26E54FAF007A6121 /* UserDefaults+Extension.swift in Sources */,
 				F82BDE4726D7746300EE7A27 /* MainModel.swift in Sources */,
 				F842E66926E20F07000B2C2B /* KakaoWidget_iOS_CloneCoding.intentdefinition in Sources */,
 				F82BDE5026D7752D00EE7A27 /* Const.swift in Sources */,
@@ -506,6 +514,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "KakaoQRcode-iOS-CloneCoding/KakaoQRcode-iOS-CloneCoding.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8C9SSEX5G;
 				INFOPLIST_FILE = "KakaoQRcode-iOS-CloneCoding/Resource/Info.plist";
@@ -526,6 +535,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "KakaoQRcode-iOS-CloneCoding/KakaoQRcode-iOS-CloneCoding.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8C9SSEX5G;
 				INFOPLIST_FILE = "KakaoQRcode-iOS-CloneCoding/Resource/Info.plist";
@@ -545,6 +555,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "KakaoWidget-iOS-CloneCodingExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8C9SSEX5G;
 				INFOPLIST_FILE = "KakaoWidget-iOS-CloneCoding/Info.plist";
@@ -566,6 +577,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = "KakaoWidget-iOS-CloneCodingExtension.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = T8C9SSEX5G;
 				INFOPLIST_FILE = "KakaoWidget-iOS-CloneCoding/Info.plist";

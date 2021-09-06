@@ -18,6 +18,10 @@ class MainViewController: UIViewController {
     let viewModel = MainViewModel()
 
     let mainLabel = UILabel()
+    let nameLabel = UILabel()
+    
+    let profileImage = UIImageView()
+    
     let presentToQRCodeButton = UIButton()
     
     var motionNumber = 0
@@ -28,6 +32,7 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         configUI()
         setLayout()
+        setUserDefaults()
         
         // UIKit 이 이 object 를 window 에서 first responder 로 만들도록 한다.
         becomeFirstResponder()
@@ -47,23 +52,52 @@ extension MainViewController {
         view.backgroundColor = .white
         mainLabel.text = "main 입니다."
         
+        nameLabel.text = "김현규"
+        
+        if let image = UIImage(named: "profileImage") {
+            profileImage.image = image
+        }
+        profileImage.contentMode = .scaleAspectFill
+        
         presentToQRCodeButton.setTitle("qr code", for: .normal)
         presentToQRCodeButton.setTitleColor(.systemBlue, for: .normal)
         presentToQRCodeButton.addTarget(self, action: #selector(presentToQRCodeVC), for: .touchUpInside)
     }
     
     private func setLayout() {
-        view.addSubviews([mainLabel, presentToQRCodeButton])
+        view.addSubviews([mainLabel, nameLabel, profileImage, presentToQRCodeButton])
         
-        mainLabel.snp.makeConstraints { make in
-            make.centerX.centerY.equalToSuperview()
+        mainLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalToSuperview().inset(200)
         }
         
-        presentToQRCodeButton.snp.makeConstraints { make in
-            make.top.equalTo(mainLabel).offset(20)
-            make.centerX.equalToSuperview()
+        profileImage.snp.makeConstraints {
+            $0.top.equalTo(mainLabel.snp.bottom).offset(20)
+            $0.size.equalTo(CGSize(width: 200, height: 300))
+            $0.centerX.equalToSuperview()
+        }
+        
+        nameLabel.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(profileImage.snp.bottom).offset(20)
+        }
+        
+        presentToQRCodeButton.snp.makeConstraints {
+            $0.bottom.equalToSuperview().inset(100)
+            $0.centerX.equalToSuperview()
         }
     }
+    
+    private func setUserDefaults() {
+        if let nameLabel = nameLabel.text {
+            viewModel.setUserDefaults(String: nameLabel, "Name")
+        }
+        if let profileImage = profileImage.image {
+            viewModel.setUserDefaults(UIImage: profileImage, "ProfileImage")
+        }
+    }
+    
     
     @objc
     private func presentToQRCodeVC() {
