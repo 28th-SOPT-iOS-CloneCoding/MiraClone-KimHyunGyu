@@ -17,4 +17,4 @@
 - [iOS) Kakao QRcode Widget 클론코딩 - MVVM 적용](https://gyuios.tistory.com/98?category=966935)
 - [iOS) Kakao QRcode Widget 클론코딩 - Widget(1/2)](https://gyuios.tistory.com/99?category=966935)
 - [iOS) Kakao QRcode Widget 클론코딩 - Widget(2/2)](https://gyuios.tistory.com/100?category=966935)
-- [iOS) Kakao QRcode 클론코딩 - widget 데이터 공유 및 뷰 구현(SwiftUI)](https://gyuios.tistory.com/102)
+- [iOS) Kakao QRcode Widget 클론코딩 - widget 데이터 공유 및 뷰 구현(SwiftUI)](https://gyuios.tistory.com/102)
