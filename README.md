@@ -1,29 +1,13 @@
 # MiraClone-KimHyunGyu
-🧚 미라클론코딩 김현규
+🤒 카카오톡 QR 위젯, ... 아요 미라클론 코딩 🤒
 
-### KakaoQRcode Widget
-**목표**
+**미라클론 목표**
 - code base
     - SnapKit
 - MVVM
 - Swift Package Manager 사용해보기
 
-### MVVM 폴더링
+[iOS) 클론코딩 스터디 - 미라클론 계획 및 내용](https://gyuios.tistory.com/91?category=966935)
 
-```bash
-├── Resource
-│   ├── Info.plist
-│   ├── Assets
-│   ├── Constants
-├── Source
-│   ├── AppDelegate
-│   ├── SceneDelegate
-│   ├── Observables
-│   ├── Models
-│   ├── ViewModels
-│   └── Views
-└── 
-``` 
-
-### Swift Package Manager
-- [Swift Package Manager 사용해보기](https://github.com/28th-SOPT-iOS-CloneCoding/MiraClone-KimHyunGyu/wiki/💨-Swift-Package-Manager-를-사용해보자)
+### Kakao QRcode Widget
+- 
