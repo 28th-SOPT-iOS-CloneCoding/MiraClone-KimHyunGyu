@@ -42,15 +42,35 @@ struct SimpleEntry: TimelineEntry {
 // profile widget
 struct ProfileEntryView: View {
     var entry: Provider.Entry
-
+    
     var body: some View {
-        Text("프로필")
+        let nameUserDefaults = UserDefaults(suiteName: "group.hyun99999.KakaoQRcodeiOSCloneCoding")
+        
+        ZStack {
+            if let name = nameUserDefaults?.string(forKey: "Name"),
+               let profileImageData = nameUserDefaults?.data(forKey: "ProfileImage"),
+               let profileImage = UIImage(data: profileImageData) {
+                Image(uiImage: profileImage)
+                    .resizable()
+                    .scaledToFill()
+                
+                Text(name)
+                    .foregroundColor(.white)
+                    .font(.system(size: 17, weight: .bold, design: .default))
+                    .alignmentGuide(HorizontalAlignment.center, computeValue: { dimension in
+                        dimension[HorizontalAlignment.center] + 40
+                    })
+                    .alignmentGuide(VerticalAlignment.center, computeValue: { dimension in
+                        dimension[VerticalAlignment.center] - 55
+                    })
+            }
+        }
     }
 }
 
 struct Profile: Widget {
     let kind: String = "Profile"
-
+    
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             ProfileEntryView(entry: entry)
