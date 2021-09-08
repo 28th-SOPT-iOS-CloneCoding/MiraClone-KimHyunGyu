@@ -179,7 +179,15 @@ struct KakaoWidget: WidgetBundle {
 
 struct KakaoWidget_iOS_CloneCoding_Previews: PreviewProvider {
     static var previews: some View {
-        QRcodeWidgetEntryView(entry: SimpleEntry(date: Date()))
-            .previewContext(WidgetPreviewContext(family: .systemSmall))
+        Group{
+            ProfileEntryView(entry: SimpleEntry(date: Date()))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            FavoritesWidgetEntryView(entry: SimpleEntry(date: Date()))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            CalenderWidgetEntryView(entry: SimpleEntry(date: Date()))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+            QRcodeWidgetEntryView(entry: SimpleEntry(date: Date()))
+                .previewContext(WidgetPreviewContext(family: .systemSmall))
+        }
     }
 }
