@@ -12,13 +12,18 @@ class FaceIDAuthenticationService {
     
     var context = LAContext()
     
-    var isLoggedind = false
+    enum AuthenticationState {
+        case loggedin, loggedout
+    }
     
+    var state = AuthenticationState.loggedout
+    
+    // 장비가 가능한지 묻는 것
     func checkBiometryTypeFaceID() -> Bool {
         return context.biometryType == .faceID
     }
     
-    func loginWithFaceID() -> Bool {
+    func loginWithFaceID() {
         context.localizedCancelTitle = "Enter Username/Password"
 
         var error: NSError?
@@ -30,21 +35,17 @@ class FaceIDAuthenticationService {
                 if success {
 
                     // Move to the main thread because a state update triggers UI changes.
-//                    DispatchQueue.main.async { [unowned self] in
-//                        self.state = .loggedin
-//                    }
-                    self.isLoggedind = true
-
+                    DispatchQueue.main.async { [unowned self] in
+                        self.state = .loggedin
+                        print("success")
+                        
+                    }
                 } else {
                     print(error?.localizedDescription ?? "Failed to authenticate")
-                    self.isLoggedind = false
                 }
             }
         } else {
             print(error?.localizedDescription ?? "Can't evaluate policy")
-            return false
         }
-        
-        return isLoggedind
     }
 }
