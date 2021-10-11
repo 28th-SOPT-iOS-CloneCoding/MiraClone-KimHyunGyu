@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 import LocalAuthentication
 
 class FaceIDAuthenticationService {
@@ -33,12 +34,10 @@ class FaceIDAuthenticationService {
             context.evaluatePolicy(.deviceOwnerAuthentication, localizedReason: reason ) { success, error in
 
                 if success {
-
                     // Move to the main thread because a state update triggers UI changes.
                     DispatchQueue.main.async { [unowned self] in
                         self.state = .loggedin
-                        print("success")
-                        
+                        NotificationCenter.default.post(name: NSNotification.Name("presentToMainVC"), object: nil)
                     }
                 } else {
                     print(error?.localizedDescription ?? "Failed to authenticate")

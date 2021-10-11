@@ -54,5 +54,13 @@ extension FaceIDAuthenticationViewController {
     private func setFaceIDAuthentication() {
         faceIDButton.isHidden = service.checkBiometryTypeFaceID()
         service.loginWithFaceID()
+        NotificationCenter.default.addObserver(self, selector: #selector(presentToMainVC), name: NSNotification.Name("presentToMainVC"), object: nil)
+    }
+    @objc
+    func presentToMainVC() {
+        let nextVC = MainViewController()
+        nextVC.modalPresentationStyle = .fullScreen
+        nextVC.modalTransitionStyle = .crossDissolve
+        self.present(nextVC, animated: true, completion: nil)
     }
 }

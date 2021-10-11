@@ -31,6 +31,7 @@
 		F8C0930526EDBFD300603E01 /* FaceIDAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C0930426EDBFD300603E01 /* FaceIDAuthenticationViewController.swift */; };
 		F8C0930726EDC2EA00603E01 /* FaceIDAuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C0930626EDC2EA00603E01 /* FaceIDAuthenticationViewModel.swift */; };
 		F8C0930A26EDC53400603E01 /* FaceIDAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C0930926EDC53400603E01 /* FaceIDAuthenticationService.swift */; };
+		F8CCA62B2713F62200B87093 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CCA62A2713F62200B87093 /* UIColor+Extension.swift */; };
 		F8EF6DAF26E54FAF007A6121 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EF6DAE26E54FAF007A6121 /* UserDefaults+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -82,6 +83,7 @@
 		F8C0930426EDBFD300603E01 /* FaceIDAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDAuthenticationViewController.swift; sourceTree = "<group>"; };
 		F8C0930626EDC2EA00603E01 /* FaceIDAuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDAuthenticationViewModel.swift; sourceTree = "<group>"; };
 		F8C0930926EDC53400603E01 /* FaceIDAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDAuthenticationService.swift; sourceTree = "<group>"; };
+		F8CCA62A2713F62200B87093 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F8D624C026DF466A00CD5187 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F8D624C226DF466A00CD5187 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		F8EF6DAC26E538B3007A6121 /* KakaoQRcode-iOS-CloneCoding.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "KakaoQRcode-iOS-CloneCoding.entitlements"; sourceTree = "<group>"; };
@@ -172,8 +174,8 @@
 		F82BDE4A26D7749C00EE7A27 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				F8C0930826EDC51E00603E01 /* Services */,
 				F82BDE2F26D771BF00EE7A27 /* AppDelegate.swift */,
+				F8C0930826EDC51E00603E01 /* Services */,
 				F82BDE5726D79A0100EE7A27 /* Observables */,
 				F82BDE4326D7744000EE7A27 /* Views */,
 				F82BDE4426D7744400EE7A27 /* Models */,
@@ -216,6 +218,7 @@
 			children = (
 				F82BDE6D26D9DE1900EE7A27 /* UIView+Extension.swift */,
 				F8EF6DAE26E54FAF007A6121 /* UserDefaults+Extension.swift */,
+				F8CCA62A2713F62200B87093 /* UIColor+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -366,6 +369,7 @@
 				F82BDE4E26D7752900EE7A27 /* ViewController.swift in Sources */,
 				F82BDE5C26D7F64200EE7A27 /* QRCodeViewController.swift in Sources */,
 				F82BDE7226DE0A5200EE7A27 /* QRCodeView.swift in Sources */,
+				F8CCA62B2713F62200B87093 /* UIColor+Extension.swift in Sources */,
 				F82BDE6E26D9DE1900EE7A27 /* UIView+Extension.swift in Sources */,
 				F82BDE7026DCBD0300EE7A27 /* QRCodeViewModel.swift in Sources */,
 				F8C0930726EDC2EA00603E01 /* FaceIDAuthenticationViewModel.swift in Sources */,

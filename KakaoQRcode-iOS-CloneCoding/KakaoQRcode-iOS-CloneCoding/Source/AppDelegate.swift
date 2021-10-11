@@ -13,9 +13,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        if #available(iOS 13.0, *) {
+            self.window?.overrideUserInterfaceStyle = UIUserInterfaceStyle.light
+        } else {
+            // earlier versions
+        }
+        
         let window = UIWindow(frame: UIScreen.main.bounds)
-        window.rootViewController = FaceIDAuthenticationViewController()
+        window.rootViewController = MainViewController()
         window.makeKeyAndVisible()
         self.window = window
         
@@ -33,7 +38,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let nextVC = QRCodeViewController()
             nextVC.modalPresentationStyle = .overFullScreen
         
-            
             window?.rootViewController?.present(nextVC, animated: true, completion: nil)
             return true
         } else {

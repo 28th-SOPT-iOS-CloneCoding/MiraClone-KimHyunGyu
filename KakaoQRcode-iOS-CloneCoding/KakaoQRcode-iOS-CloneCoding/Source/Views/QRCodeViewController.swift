@@ -50,11 +50,24 @@ class QRCodeViewController: UIViewController {
 // MARK: - Extensions
 
 extension QRCodeViewController {
+    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        super.traitCollectionDidChange(previousTraitCollection)
+        guard #available(iOS 13, *) else { return }
+        guard traitCollection.hasDifferentColorAppearance(comparedTo: previousTraitCollection) else { return }
+        guard traitCollection.userInterfaceStyle != previousTraitCollection?.userInterfaceStyle else { return }
+        qrcodeBackView.layer.shadowColor = UIColor.shadowColor.cgColor
+    }
+    
     private func configUI(){
-        view.backgroundColor = .white
+        //  다음과 같이 system color 를 사용해도 가능하다. Light 모드와 Dark 모드를 자동으로 대응해줌.
+//        view.backgroundColor = .systemBackground
+        // 다음과 같이 Color Assets 을 만들어서 extension 으로 정의하면 사용가능하다.
+//        view.backgroundColor = .backgroundColorAsset
+        view.backgroundColor = .backgroundColor
         
         titleLabel.text = "입장을 위한 QR X COOV"
         titleLabel.font = UIFont.boldSystemFont(ofSize: 17)
+        titleLabel.textColor = .defaultLabelColor
         
         subtitleLabel.text = "이용하려는 시설에 QR코드로 체크인하거나 수기명부에\n휴대전화번호 대신 개인안심번호를 기재하세요."
         subtitleLabel.font = UIFont.systemFont(ofSize: 13)
@@ -63,7 +76,7 @@ extension QRCodeViewController {
         subtitleLabel.textAlignment = .center
         
         closeButton.setImage(UIImage(systemName: "xmark"), for: .normal)
-        closeButton.tintColor = .black
+        closeButton.tintColor = .defaultLabelColor
         closeButton.setPreferredSymbolConfiguration(.init(pointSize: 20, weight: .regular), forImageIn: .normal)
         closeButton.addAction(UIAction { _ in
             self.viewModel.dismissToMainVC(self)
@@ -79,11 +92,11 @@ extension QRCodeViewController {
             print(self.viewModel.isShakeAvailable.value)
         }, for: .touchUpInside)
         
-        qrcodeBackView.backgroundColor = .white
+        qrcodeBackView.backgroundColor = .backgroundColor
+        qrcodeBackView.layer.shadowColor = UIColor.shadowColor.cgColor
         qrcodeBackView.layer.cornerRadius = 10
-        qrcodeBackView.layer.shadowColor = UIColor.black.cgColor
         qrcodeBackView.layer.shadowRadius = 3
-        qrcodeBackView.layer.shadowOpacity = 0.1
+        qrcodeBackView.layer.shadowOpacity = 1
         qrcodeBackView.layer.shadowOffset = CGSize(width: 0, height: 0)
         qrcodeBackView.layer.masksToBounds = false
         
@@ -94,12 +107,14 @@ extension QRCodeViewController {
         // private stack view
         privatetextLabel.text = "개인안심번호"
         privatetextLabel.font = UIFont.systemFont(ofSize: 15)
+        privatetextLabel.textColor = .black
 
         privateQuestionButton.setImage(UIImage(systemName: "questionmark.circle.fill"), for: .normal)
         privateQuestionButton.tintColor = .gray
         privateQuestionButton.setPreferredSymbolConfiguration(.init(pointSize: 15), forImageIn: .normal)
         
         privateNumberLabel.text = "12현34규"
+        privateNumberLabel.textColor = .black
         privateNumberLabel.font = UIFont.boldSystemFont(ofSize: 15)
 
         var privateViewList = [UIView]()
@@ -196,7 +211,7 @@ extension QRCodeViewController {
         }
 
         viewModel.qrcodeMsg.bind { msg in
-            self.qrcodeImageView.generateCode(msg)
+            self.qrcodeImageView.generateCode(msg, foregroundColor: .defaultLabelColor, backgroundColor: .backgroundColor)
         }
         
         viewModel.timeText.bind { time in
