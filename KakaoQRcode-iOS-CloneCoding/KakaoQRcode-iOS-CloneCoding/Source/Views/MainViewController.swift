@@ -49,10 +49,12 @@ class MainViewController: UIViewController {
 extension MainViewController {
     
     private func configUI(){
-        view.backgroundColor = .white
+        view.backgroundColor = .backgroundColor
         mainLabel.text = "main 입니다."
+        mainLabel.textColor = .defaultLabelColor
         
         nameLabel.text = "김현규"
+        nameLabel.textColor = .defaultLabelColor
         
         if let image = UIImage(named: "profileImage") {
             profileImage.image = image

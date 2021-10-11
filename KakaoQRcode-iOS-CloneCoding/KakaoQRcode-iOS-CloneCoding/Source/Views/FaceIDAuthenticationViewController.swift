@@ -13,6 +13,7 @@ class FaceIDAuthenticationViewController: UIViewController {
     let faceIDButton = UIButton()
     
     let viewModel = FaceIDAuthenticationViewModel()
+    let service = FaceIDAuthenticationService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +21,6 @@ class FaceIDAuthenticationViewController: UIViewController {
         setLayout()
         setBinding()
         setFaceIDAuthentication()
-
     }
 }
 
@@ -35,10 +35,7 @@ extension FaceIDAuthenticationViewController {
         faceIDButton.tintColor = .black
         faceIDButton.setPreferredSymbolConfiguration(.init(pointSize: 40, weight: .light), forImageIn: .normal)
         faceIDButton.addAction(UIAction { _ in
-            if self.viewModel.setLoginWithFaceID() {
-                print("dismiss")
-//                self.dismiss(animated: true, completion: nil)
-            }
+            self.service.loginWithFaceID()
         }, for: .touchUpInside)
     }
     
@@ -51,14 +48,19 @@ extension FaceIDAuthenticationViewController {
     }
     
     private func setBinding() {
-        viewModel.isFaceIDButtonHidden.bind { hidden in
-//            self.faceIDButton.isHidden = hidden
-            self.faceIDButton.isHidden = false
-        }
+
     }
     
     private func setFaceIDAuthentication() {
-        viewModel.setFaceIDButton()
-        viewModel.setLoginWithFaceID()
+        faceIDButton.isHidden = service.checkBiometryTypeFaceID()
+        service.loginWithFaceID()
+        NotificationCenter.default.addObserver(self, selector: #selector(presentToMainVC), name: NSNotification.Name("presentToMainVC"), object: nil)
+    }
+    @objc
+    func presentToMainVC() {
+        let nextVC = MainViewController()
+        nextVC.modalPresentationStyle = .fullScreen
+        nextVC.modalTransitionStyle = .crossDissolve
+        self.present(nextVC, animated: true, completion: nil)
     }
 }
