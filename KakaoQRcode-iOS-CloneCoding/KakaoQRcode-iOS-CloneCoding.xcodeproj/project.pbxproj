@@ -31,6 +31,11 @@
 		F8C0930526EDBFD300603E01 /* FaceIDAuthenticationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C0930426EDBFD300603E01 /* FaceIDAuthenticationViewController.swift */; };
 		F8C0930726EDC2EA00603E01 /* FaceIDAuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C0930626EDC2EA00603E01 /* FaceIDAuthenticationViewModel.swift */; };
 		F8C0930A26EDC53400603E01 /* FaceIDAuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C0930926EDC53400603E01 /* FaceIDAuthenticationService.swift */; };
+		F8C657762754A2290003B5D3 /* UniformTypeIdentifiers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8C657752754A2290003B5D3 /* UniformTypeIdentifiers.framework */; };
+		F8C657792754A2290003B5D3 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C657782754A2290003B5D3 /* Media.xcassets */; };
+		F8C6577B2754A2290003B5D3 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8C6577A2754A2290003B5D3 /* ActionViewController.swift */; };
+		F8C6577E2754A2290003B5D3 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8C6577C2754A2290003B5D3 /* MainInterface.storyboard */; };
+		F8C657822754A2290003B5D3 /* ActionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F8C657742754A2290003B5D3 /* ActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		F8CCA62B2713F62200B87093 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CCA62A2713F62200B87093 /* UIColor+Extension.swift */; };
 		F8EF6DAF26E54FAF007A6121 /* UserDefaults+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8EF6DAE26E54FAF007A6121 /* UserDefaults+Extension.swift */; };
 /* End PBXBuildFile section */
@@ -43,6 +48,13 @@
 			remoteGlobalIDString = F842E65D26E20F06000B2C2B;
 			remoteInfo = "KakaoWidget-iOS-CloneCodingExtension";
 		};
+		F8C657802754A2290003B5D3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F82BDE2426D771BF00EE7A27 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F8C657732754A2290003B5D3;
+			remoteInfo = ActionExtension;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +64,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				F8C657822754A2290003B5D3 /* ActionExtension.appex in Embed App Extensions */,
 				F842E66C26E20F07000B2C2B /* KakaoWidget-iOS-CloneCodingExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
@@ -83,6 +96,12 @@
 		F8C0930426EDBFD300603E01 /* FaceIDAuthenticationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDAuthenticationViewController.swift; sourceTree = "<group>"; };
 		F8C0930626EDC2EA00603E01 /* FaceIDAuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDAuthenticationViewModel.swift; sourceTree = "<group>"; };
 		F8C0930926EDC53400603E01 /* FaceIDAuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceIDAuthenticationService.swift; sourceTree = "<group>"; };
+		F8C657742754A2290003B5D3 /* ActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F8C657752754A2290003B5D3 /* UniformTypeIdentifiers.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UniformTypeIdentifiers.framework; path = System/Library/Frameworks/UniformTypeIdentifiers.framework; sourceTree = SDKROOT; };
+		F8C657782754A2290003B5D3 /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
+		F8C6577A2754A2290003B5D3 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		F8C6577D2754A2290003B5D3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		F8C6577F2754A2290003B5D3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8CCA62A2713F62200B87093 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 		F8D624C026DF466A00CD5187 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		F8D624C226DF466A00CD5187 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
@@ -109,6 +128,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8C657712754A2290003B5D3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C657762754A2290003B5D3 /* UniformTypeIdentifiers.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -118,6 +145,7 @@
 				F8EF6DAD26E539EE007A6121 /* KakaoWidget-iOS-CloneCodingExtension.entitlements */,
 				F82BDE2E26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding */,
 				F842E66126E20F06000B2C2B /* KakaoWidget-iOS-CloneCoding */,
+				F8C657772754A2290003B5D3 /* ActionExtension */,
 				F8D624BF26DF466A00CD5187 /* Frameworks */,
 				F82BDE2D26D771BF00EE7A27 /* Products */,
 			);
@@ -128,6 +156,7 @@
 			children = (
 				F82BDE2C26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding.app */,
 				F842E65E26E20F06000B2C2B /* KakaoWidget-iOS-CloneCodingExtension.appex */,
+				F8C657742754A2290003B5D3 /* ActionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -250,11 +279,23 @@
 			path = Services;
 			sourceTree = "<group>";
 		};
+		F8C657772754A2290003B5D3 /* ActionExtension */ = {
+			isa = PBXGroup;
+			children = (
+				F8C657782754A2290003B5D3 /* Media.xcassets */,
+				F8C6577A2754A2290003B5D3 /* ActionViewController.swift */,
+				F8C6577C2754A2290003B5D3 /* MainInterface.storyboard */,
+				F8C6577F2754A2290003B5D3 /* Info.plist */,
+			);
+			path = ActionExtension;
+			sourceTree = "<group>";
+		};
 		F8D624BF26DF466A00CD5187 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				F8D624C026DF466A00CD5187 /* WidgetKit.framework */,
 				F8D624C226DF466A00CD5187 /* SwiftUI.framework */,
+				F8C657752754A2290003B5D3 /* UniformTypeIdentifiers.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -275,6 +316,7 @@
 			);
 			dependencies = (
 				F842E66B26E20F07000B2C2B /* PBXTargetDependency */,
+				F8C657812754A2290003B5D3 /* PBXTargetDependency */,
 			);
 			name = "KakaoQRcode-iOS-CloneCoding";
 			packageProductDependencies = (
@@ -301,13 +343,30 @@
 			productReference = F842E65E26E20F06000B2C2B /* KakaoWidget-iOS-CloneCodingExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
+		F8C657732754A2290003B5D3 /* ActionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F8C657852754A2290003B5D3 /* Build configuration list for PBXNativeTarget "ActionExtension" */;
+			buildPhases = (
+				F8C657702754A2290003B5D3 /* Sources */,
+				F8C657712754A2290003B5D3 /* Frameworks */,
+				F8C657722754A2290003B5D3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActionExtension;
+			productName = ActionExtension;
+			productReference = F8C657742754A2290003B5D3 /* ActionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		F82BDE2426D771BF00EE7A27 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1250;
+				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
 					F82BDE2B26D771BF00EE7A27 = {
@@ -315,6 +374,9 @@
 					};
 					F842E65D26E20F06000B2C2B = {
 						CreatedOnToolsVersion = 12.5.1;
+					};
+					F8C657732754A2290003B5D3 = {
+						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
@@ -336,6 +398,7 @@
 			targets = (
 				F82BDE2B26D771BF00EE7A27 /* KakaoQRcode-iOS-CloneCoding */,
 				F842E65D26E20F06000B2C2B /* KakaoWidget-iOS-CloneCodingExtension */,
+				F8C657732754A2290003B5D3 /* ActionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -355,6 +418,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				F842E66626E20F07000B2C2B /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8C657722754A2290003B5D3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C657792754A2290003B5D3 /* Media.xcassets in Resources */,
+				F8C6577E2754A2290003B5D3 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,6 +466,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F8C657702754A2290003B5D3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F8C6577B2754A2290003B5D3 /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -401,6 +481,11 @@
 			isa = PBXTargetDependency;
 			target = F842E65D26E20F06000B2C2B /* KakaoWidget-iOS-CloneCodingExtension */;
 			targetProxy = F842E66A26E20F07000B2C2B /* PBXContainerItemProxy */;
+		};
+		F8C657812754A2290003B5D3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F8C657732754A2290003B5D3 /* ActionExtension */;
+			targetProxy = F8C657802754A2290003B5D3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -411,6 +496,14 @@
 				F82BDE3B26D771BF00EE7A27 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		F8C6577C2754A2290003B5D3 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F8C6577D2754A2290003B5D3 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -618,6 +711,60 @@
 			};
 			name = Release;
 		};
+		F8C657832754A2290003B5D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T8C9SSEX5G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActionExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "현규액션><";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "hyun99999.KakaoQRcode-iOS-CloneCoding.ActionExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F8C657842754A2290003B5D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T8C9SSEX5G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActionExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "현규액션><";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "hyun99999.KakaoQRcode-iOS-CloneCoding.ActionExtension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -644,6 +791,15 @@
 			buildConfigurations = (
 				F842E66E26E20F07000B2C2B /* Debug */,
 				F842E66F26E20F07000B2C2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F8C657852754A2290003B5D3 /* Build configuration list for PBXNativeTarget "ActionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F8C657832754A2290003B5D3 /* Debug */,
+				F8C657842754A2290003B5D3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
