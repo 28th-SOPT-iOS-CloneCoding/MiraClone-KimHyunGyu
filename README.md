@@ -1,5 +1,7 @@
 # MiraClone-KimHyunGyu
-🤒 카카오톡 QR 위젯 - 아요 미라클론 코딩 🤒
+🤒 ***카카오톡 QR 위젯 클론코딩 스터디*** 🤒
+
+<img src="https://user-images.githubusercontent.com/69136340/167760503-f77f1836-1328-4286-9f6e-1cfa31796259.jpeg" width = "150">
 
 **미라클론 목표**
 - code base
